@@ -1,0 +1,56 @@
+﻿WIN11 CUSTOMIZER  v1.0
+======================
+
+STARTEN
+  Doppelklick auf "Win11 Customizer.exe"
+  Die .exe enthält alles (auch die Desktop-Kacheln) - du kannst sie allein weitergeben.
+  Kein Admin, keine Installation. Beim ersten Start kann Windows SmartScreen warnen
+  ("Weitere Informationen" > "Trotzdem ausführen"), weil die .exe nicht signiert ist.
+  Die .bat-Dateien werden nicht mehr gebraucht.
+  Tipp: Unter "Backup & Profile" -> "Desktop-Verknüpfung" bekommst du ein Icon auf den Desktop.
+
+WAS DIE APP KANN
+  Start            10 Themes mit einem Klick (Akzentfarbe + Hell/Dunkel + eigenes 4K-Hintergrundbild),
+                   Zufalls-Theme, beliebte Tweaks
+  Farben & Design  28 Akzentfarben + eigene Farbe/Hex-Code, Hell/Dunkel getrennt für Windows und Apps,
+                   Transparenz, Akzent auf Taskleiste/Start/Titelleisten, Live-Vorschau
+  Taskleiste       Links/Mitte, Suche, Gruppieren, Taskansicht, Widgets, Sekunden in der Uhr,
+                   Auto-Ausblenden, "Task beenden" im Rechtsklick, mehrere Monitore ...
+  Startmenü        Layout, Empfehlungen, Bing-Websuche aus, Suchhighlights
+  Explorer/Desktop Klassisches Rechtsklick-Menü, Dateiendungen, versteckte Dateien, kompakte Ansicht,
+                   Desktop-Symbole, eigenes Hintergrundbild oder Einfarbig
+  Effekte/Maus     Animationen, Menü-Tempo, Snap-Layouts, Mausbeschleunigung aus (Gaming),
+                   Zeigergröße, Zeigerschatten, Systemsounds
+  Desktop-Kacheln  Live-Widgets auf dem Desktop im Mac-Look (oder Glas / Akzent / Bunt):
+                   Uhr (analog/digital), Defender & Windows Updates, Systemwerte (frei wählbar:
+                   CPU-Last/-Temp Ø P-Kerne/-Takt/-Leistung, RAM, GPU-Last/-Temp/VRAM/-Leistung/-Lüfter,
+                   Mainboard, Lüfter, Netzwerk), Netzwerk mit Graph, Mainboard-Sensoren, Laufwerk,
+                   Apps, Ordner, Webseiten, Notizen, Aktionen (Sperren, Neustart ...).
+                   Klick = öffnen, Ziehen = verschieben, Rechtsklick = Menü.
+                   Stil, Ecken, Deckkraft, Größe, Schatten, Farben - alles einstellbar.
+  Werbung & Tipps  Alle Windows-Werbung/Vorschläge einzeln oder mit einem Klick aus
+  Backup/Profile   Alles auf Original zurücksetzen, Look als Profil exportieren/importieren
+
+SICHERHEIT
+  - Ändert nur Einstellungen deines Benutzerkontos.
+  - Vor der ERSTEN Änderung jedes Werts wird das Original gespeichert:
+    %APPDATA%\Win11Customizer\original-backup.json
+  - "Backup & Profile" -> "Alles auf Original zurücksetzen" stellt alles wieder her.
+
+TEMPERATUREN & LÜFTER (HWiNFO)
+  Windows lässt Apps keine Temperaturen auslesen - dafür wird HWiNFO (kostenlos) genutzt:
+  1. HWiNFO installieren (www.hwinfo.com) und "Sensors-only" starten
+  2. Einstellungen > "Shared Memory Support" anhaken
+  3. Optional: "Auto Start" + "Minimize Sensors on Startup", damit es immer im Hintergrund läuft
+  NVIDIA-GPU-Werte gehen zur Not auch ohne HWiNFO (über nvidia-smi vom Treiber).
+
+HINWEISE
+  - Manche Änderungen (Taskleiste, Akzent auf Taskleiste, Desktop-Symbole) brauchen einen
+    Explorer-Neustart -> Button in der App. Die Taskleiste ist dabei 1-2 Sekunden weg.
+  - Einzelne Einstellungen (z. B. Widgets) sperrt Windows bei manchen Versionen für Apps -
+    dann zeigt die App einen Hinweis.
+  - Falls die App nicht startet: "Fehlersuche (mit Konsole).bat" starten und die Meldung schicken.
+    Fehler-Log: %APPDATA%\Win11Customizer\error.log  (Kacheln: tiles-error.log)
+  - Die .ps1-Dateien sind der Quellcode; die .exe entpackt sie nach
+    %LOCALAPPDATA%\Win11Customizer\app und startet sie ohne Konsolenfenster.
+  - exe-quellcode\ enthält den C#-Starter und das Icon.
